@@ -1,0 +1,18 @@
+#!/bin/bash
+# Prompt the user to enter three numbers
+echo "Enter first number: "
+read num1
+echo "Enter second number: "
+read num2
+echo "Enter third number: "
+read num3
+# Compare the numbers and find the largest using (( ))
+if (( num1 >= num2 && num1 >= num3 )); then
+    largest=$num1
+elif (( num2 >= num1 && num2 >= num3 )); then
+    largest=$num2
+else
+    largest=$num3
+fi
+# Print the largest number
+echo "The largest number is: $largest"
